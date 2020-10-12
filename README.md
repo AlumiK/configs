@@ -1,3 +1,3 @@
 # Configs
 
-This repository contains some useful configs of my games and software.
+Backup repository for some useful configs.
