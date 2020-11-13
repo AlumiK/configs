@@ -1,0 +1,7 @@
+[user]
+	name = Zhong Zhenyu
+	email = nczzy1997@gmail.com
+[core]
+	editor = \"code\" --wait
+	longpaths = true
+	autocrlf = input
