@@ -84,6 +84,27 @@ function Write-Theme {
     $prompt += Write-Prompt -Object $sl.PromptSymbols.SegmentForwardSymbol -ForegroundColor $lastColor
 
     # Writes the postfix to the prompt.
+    $timeStamp = Get-Date -Format "hh:mm tt"
+    $timestamp = " $timeStamp "
+
+    if ($host.UI.RawUI.CursorPosition.X + $timestamp.Length + 10 -lt $host.UI.RawUI.WindowSize.Width) {
+        $prompt += Set-CursorForRightBlockWrite -textLength ($timestamp.Length + 10)
+        $prompt += Write-Prompt -Object $sl.PromptSymbols.Blur1Symbol -ForegroundColor $PromptForegroundColor
+        $prompt += Write-Prompt -Object $sl.PromptSymbols.Blur2Symbol -ForegroundColor $PromptForegroundColor
+        $prompt += Write-Prompt -Object $sl.PromptSymbols.Blur3Symbol -ForegroundColor $PromptForegroundColor
+        $prompt += Write-Prompt $timeStamp -ForegroundColor $sl.Colors.GitForegroundColor -BackgroundColor $sl.Colors.PromptForegroundColor
+        $prompt += Write-Prompt -Object "$($sl.PromptSymbols.ClockSymbol) " -ForegroundColor $sl.Colors.GitForegroundColor -BackgroundColor $sl.Colors.PromptForegroundColor
+        $prompt += Write-Prompt -Object $sl.PromptSymbols.Blur3Symbol -ForegroundColor $PromptForegroundColor
+        $prompt += Write-Prompt -Object $sl.PromptSymbols.Blur2Symbol -ForegroundColor $PromptForegroundColor
+        $prompt += Write-Prompt -Object $sl.PromptSymbols.Blur1Symbol -ForegroundColor $PromptForegroundColor
+    }
+
+    $prompt += Set-Newline
+
+    if ($with) {
+        $prompt += Write-Prompt -Object "$($with.ToUpper()) " -BackgroundColor $sl.Colors.WithBackgroundColor -ForegroundColor $sl.Colors.WithForegroundColor
+    }
+    $prompt += Write-Prompt -Object "PS>" -ForegroundColor $sl.Colors.PromptSymbolColor
     $prompt += ' '
     $prompt
 }
@@ -91,6 +112,10 @@ function Write-Theme {
 $sl = $global:ThemeSettings #local settings
 $sl.PromptSymbols.SegmentForwardSymbol = [char]::ConvertFromUtf32(0xE0B0)
 $sl.PromptSymbols.VirtualEnvSymbol = "🐍"
+$sl.PromptSymbols.Blur1Symbol = [char]::ConvertFromUtf32(0x2591)
+$sl.PromptSymbols.Blur2Symbol = [char]::ConvertFromUtf32(0x2592)
+$sl.PromptSymbols.Blur3Symbol = [char]::ConvertFromUtf32(0x2593)
+$sl.PromptSymbols.ClockSymbol = "⌚"
 $sl.Colors.SessionInfoBackgroundColor = [ConsoleColor]::Cyan
 $sl.Colors.SessionInfoForegroundColor = [ConsoleColor]::Black
 $sl.Colors.PromptForegroundColor = [ConsoleColor]::White
