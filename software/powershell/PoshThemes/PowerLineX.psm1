@@ -10,31 +10,6 @@ function Write-Theme {
     $lastColor = $sl.Colors.PromptBackgroundColor
     $authorityStatus = ((Invoke-CimMethod -InputObject $(Get-CimInstance Win32_Process -Filter "Handle=$PID") -MethodName GetOwner).User) -eq 'SYSTEM'
 
-    # Identify background colors for administrative rights
-    # Declare the colors.
-    $rootBackground = [ConsoleColor]::Magenta
-    $rootForeground = [ConsoleColor]::White
-    $reguserBackground = [ConsoleColor]::Blue
-    $reguserForeground = [ConsoleColor]::White
-    $authorityForeground = [ConsoleColor]::White
-    $authorityBackground = [ConsoleColor]::Red
-    
-    # Make it work.
-    If ($authorityStatus) {
-        $promptTagBackground = $authorityBackground
-        $promptTagForeground = $authorityForeground
-    }
-    else {
-        If (Test-Administrator) {
-            $promptTagBackground = $rootBackground
-            $rootForeground = $rootForeground
-        }
-        else {
-            $promptTagBackground = $reguserBackground
-            $promptTagForeground = $reguserForeground
-        }
-    }
-
     $prompt = Write-Prompt -Object $sl.PromptSymbols.StartSymbol -ForegroundColor $sl.Colors.SessionInfoForegroundColor -BackgroundColor $sl.Colors.SessionInfoBackgroundColor
 
     $user = $sl.CurrentUser

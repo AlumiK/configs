@@ -58,19 +58,19 @@
                 "icon": "%USERPROFILE%/miniconda3/Menu/Iconleak-Atrous-PSConsole.ico"
             },
             {
-                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b9}",
+                "guid": "{00000000-0000-0000-ba54-000000000004}",
                 "name": "服务器 10.10.1.212",
                 "commandline": "ssh 10.10.1.212",
                 "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png"
             },
             {
-                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441ba}",
+                "guid": "{00000000-0000-0000-ba54-000000000005}",
                 "name": "服务器 10.10.1.213",
                 "commandline": "ssh 10.10.1.213",
                 "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png"
             },
             {
-                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441bb}",
+                "guid": "{00000000-0000-0000-ba54-000000000006}",
                 "name": "服务器 58.250.74.108",
                 "commandline": "ssh 58.250.74.108",
                 "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png"
