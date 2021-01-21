@@ -59,8 +59,20 @@
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b9}",
-                "name": "SSH 10.10.1.212",
-                "commandline": "ssh zhongzhenyu@10.10.1.212",
+                "name": "服务器 10.10.1.212",
+                "commandline": "ssh 10.10.1.212",
+                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441ba}",
+                "name": "服务器 10.10.1.213",
+                "commandline": "ssh 10.10.1.213",
+                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441bb}",
+                "name": "服务器 58.250.74.108",
+                "commandline": "ssh 58.250.74.108",
                 "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png"
             },
             {
