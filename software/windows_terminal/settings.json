@@ -20,10 +20,11 @@
     "profiles": {
         "defaults": {
             // Put settings here that you want to apply to all profiles.
-            "useAcrylic": true,
+            "useAcrylic": false,
             "acrylicOpacity": 0.7,
-            "fontFace": "Cascadia Code PL",
-            "colorScheme": "Ubuntu [Dark]"
+            "fontFace": "MesloLGM NF",
+            "colorScheme": "Ubuntu [Dark]",
+            "experimental.retroTerminalEffect": false
         },
         "list": [
             {
@@ -71,6 +72,12 @@
             },
             {
                 "guid": "{00000000-0000-0000-ba54-000000000006}",
+                "name": "服务器 58.250.74.98",
+                "commandline": "ssh 58.250.74.98",
+                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png"
+            },
+            {
+                "guid": "{00000000-0000-0000-ba54-000000000007}",
                 "name": "服务器 58.250.74.108",
                 "commandline": "ssh 58.250.74.108",
                 "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png"
@@ -98,7 +105,7 @@
             "red": "#AE5E5E",
             "white": "#B5BBAE",
             "yellow": "#C4A000",
-            "brightBlack": "#696B67",
+            "brightBlack": "#767676",
             "brightBlue": "#729FCF",
             "brightCyan": "#2EC3C3",
             "brightGreen": "#79C32E",
