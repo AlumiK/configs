@@ -1,9 +1,19 @@
+ServerAliveInterval 120
+
+Host 10.10.1.203
+  HostName 10.10.1.203
+  User zhongzhenyu
+
 Host 10.10.1.212
   HostName 10.10.1.212
   User zhongzhenyu
 
 Host 10.10.1.213
   HostName 10.10.1.213
+  User zhongzhenyu
+
+Host 58.250.74.98
+  HostName 58.250.74.98
   User zhongzhenyu
 
 Host 58.250.74.108
@@ -13,23 +23,10 @@ Host 58.250.74.108
 Host Docker-CPU
   HostName 10.10.1.212
   User root
-  Port 11022
+  Port 11122
 
 Host Docker-CPU-Forwarded
   HostName 10.10.1.212
   User root
-  Port 11022
-  ProxyCommand C:\Windows\System32\OpenSSH\ssh.exe -W %h:%p 10.10.1.212
-
-Host Docker-GPU
-  HostName 10.10.1.212
-  User root
-  Port 11023
-
-Host Docker-GPU-Forwarded
-  HostName 10.10.1.212
-  User root
-  Port 11023
-  ProxyCommand C:\Windows\System32\OpenSSH\ssh.exe -W %h:%p 10.10.1.212
-
-ServerAliveInterval 120
+  Port 11122
+  ProxyCommand C:\Windows\System32\OpenSSH\ssh.exe -W %h:%p 10.10.1.203
