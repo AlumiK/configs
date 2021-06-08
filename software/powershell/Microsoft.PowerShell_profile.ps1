@@ -1,3 +1,1 @@
-Import-Module posh-git
-Import-Module oh-my-posh
-Set-Theme PowerLineX
+Set-PoshPrompt -Theme ~\Documents\PowerShell\PoshThemes\powerlinex.omp.json
